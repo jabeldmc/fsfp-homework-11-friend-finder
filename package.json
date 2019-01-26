@@ -1,0 +1,25 @@
+{
+  "name": "fsfp-homework-11-friend-finder",
+  "version": "1.0.0",
+  "description": "Full Stack Flex Program Homework 11: Friend Finder",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mon": "nodemon server.js",
+    "run": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jabeldmc/fsfp-homework-11-friend-finder.git"
+  },
+  "author": "jabeldmc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jabeldmc/fsfp-homework-11-friend-finder/issues"
+  },
+  "homepage": "https://github.com/jabeldmc/fsfp-homework-11-friend-finder#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9"
+  }
+}
