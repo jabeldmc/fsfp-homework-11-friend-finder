@@ -1,2 +1,0 @@
-/*** /route/static.js
-***/

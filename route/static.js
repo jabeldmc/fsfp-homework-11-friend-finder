@@ -1,4 +1,4 @@
-/*** /route/api.js
+/*** /route/static.js
 ***/
 
 // Require
@@ -10,9 +10,9 @@ var path = require( 'path' );
 
 const addRoutes = function( app ) {
 
-    // GET friends
+    // GET home page
     app.get(
-        '/api/friends' ,
+        '/' ,
         ( request , response ) => {
             console.log();
             console.group( `# Route '/'` );
@@ -21,23 +21,18 @@ const addRoutes = function( app ) {
             console.log( 'Parameters :' , request.params );
             console.log( 'Body :' , request.body );
 
-            response.json(
-                {
-                    originalUrl : request.originalUrl ,
-                    method : request.method ,
-                    params : request.params ,
-                    body : request.body
-                }
-            );
+            var htmlPath = path.join( __dirname , '../static/index.html' );
+            console.log( 'htmlPath :' , htmlPath );
+            response.sendFile( htmlPath );
 
             console.log( 'done.' );
             console.groupEnd();
         }
     );
 
-    // POST friends
-    app.post(
-        '/api/friends' ,
+    // GET survey
+    app.get(
+        '/survey' ,
         ( request , response ) => {
             console.log();
             console.group( `# Route '/survey'` );
@@ -46,14 +41,9 @@ const addRoutes = function( app ) {
             console.log( 'Parameters :' , request.params );
             console.log( 'Body :' , request.body );
 
-            response.json(
-                {
-                    originalUrl : request.originalUrl ,
-                    method : request.method ,
-                    params : request.params ,
-                    body : request.body
-                }
-            );
+            var htmlPath = path.join( __dirname , '../static/survey.html' );
+            console.log( 'htmlPath :' , htmlPath );
+            response.sendFile( htmlPath );
 
             console.log( 'done.' );
             console.groupEnd();
