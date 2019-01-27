@@ -35,10 +35,10 @@ const addRoutes = function( app ) {
 
     // GET friends
     app.get(
-        '/api/friends' ,
+        '/api/friend' ,
         ( request , response ) => {
             console.log();
-            console.group( `# Route '/'` );
+            console.group( `# Route '/api/friend'` );
             console.log( 'request.originalUrl :' , request.originalUrl );
             console.log( 'request.method :' , request.method );
             console.log( 'request.params :' , request.params );
@@ -51,12 +51,12 @@ const addRoutes = function( app ) {
         }
     );
 
-    // POST friends
+    // POST find friend match
     app.post(
-        '/api/friends' ,
+        '/api/friend' ,
         ( request , response ) => {
             console.log();
-            console.group( `# Route '/survey'` );
+            console.group( `# Route /api/friend` );
             console.log( 'request.originalUrl :' , request.originalUrl );
             console.log( 'request.method :' , request.method );
             console.log( 'request.params :' , request.params );
@@ -64,6 +64,27 @@ const addRoutes = function( app ) {
             console.log( 'request.body.answers :' , request.body.answers );
 
             response.json( matchFriend( request.body.answers ) );
+
+            console.log( 'done.' );
+            console.groupEnd();
+        }
+    );
+
+    // POST add friend
+    app.post(
+        '/api/friend/add' ,
+        ( request , response ) => {
+            console.log();
+            console.group( `# Route /api/friend/add` );
+            console.log( 'request.originalUrl :' , request.originalUrl );
+            console.log( 'request.method :' , request.method );
+            console.log( 'request.params :' , request.params );
+            console.log( 'request.body :' , request.body );
+            console.log( 'request.body.answers :' , request.body.answers );
+
+            var newFriend = request.body;
+            friends.push( newFriend );
+            response.json( { message : 'OK' } );
 
             console.log( 'done.' );
             console.groupEnd();

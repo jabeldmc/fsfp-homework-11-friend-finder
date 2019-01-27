@@ -21,6 +21,9 @@ var app = express();
 app.use( express.urlencoded( { extended : true } ) );
 app.use( express.json() );
 
+// Express static directory
+app.use( express.static( 'static' ) );
+
 // Add routes
 var addRoutes = require( './route/static.js' );
 addRoutes( app );

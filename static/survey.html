@@ -34,6 +34,7 @@
     <!-- External Javascript -->
     <!-- <script src="asset/script/jdcUtil.js" async></script> -->
     <!-- <script src="asset/script/jdcUtil.js" defer></script> -->
+    <script src="/asset/script/survey.js" defer></script>
 </head>
 
 <body>
@@ -220,9 +221,7 @@
             <!-- Row 4: Submit -->
             <div class="row mr-0">
                 <div class="col-12 pr-0">
-                    <button id="survey-form-submit" type="submit" class="btn btn-primary mb-3">Submit</button>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#survey-result-modal">Survey Result Modal</button>
+                    <button id="survey-form-submit" type="submit" class="btn btn-primary mb-3">Find My Foodie Friend!</button>
                 </div>
             </div>
             <!-- Row 4: Submit -->
@@ -232,15 +231,18 @@
 
 
         <!-- Modal -->
-        <div class="modal fade" id="survey-result-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="friend-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalCenterTitle">Meet Your New Friend</h5>
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Your Foodie Friend!</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        Survey result
+                        <p>Say hello to <span id="friend-name" class="font-weight-bold">${matchFriend.name}</span>!</p>
+                        <div>
+                            <img id="friend-photo" src="${matchFriend.photoUrl}" class="img-fluid">
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
