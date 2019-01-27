@@ -3,9 +3,32 @@
 
 // Require
 var path = require( 'path' );
+var friends = require( '../data/friends.json' );
 
 
-/*** FUNCTION addStaticRoutes
+/*** FUNCTION getScore
+***/
+
+const getScore = function( answers , otherAnswers ) {
+    return answers.reduce(
+        ( accumulator , answer , answerIndex ) => ( accumulator + Math.abs( answer - otherAnswers[ answerIndex ] ) ) ,
+        0
+    );
+}
+
+
+/*** FUNCTION matchFriend()
+***/
+
+const matchFriend = function( answers ) {
+    var sortedFriends = friends.sort(
+        ( thisFriend , otherFriend ) => ( getScore( answers , thisFriend.answers ) - getScore( answers , otherFriend.answers ) )
+    );
+    return sortedFriends[ 0 ];
+}
+
+
+/*** FUNCTION addRoutes
 ***/
 
 const addRoutes = function( app ) {
@@ -18,17 +41,10 @@ const addRoutes = function( app ) {
             console.group( `# Route '/'` );
             console.log( 'request.originalUrl :' , request.originalUrl );
             console.log( 'request.method :' , request.method );
-            console.log( 'Parameters :' , request.params );
-            console.log( 'Body :' , request.body );
+            console.log( 'request.params :' , request.params );
+            console.log( 'request.body :' , request.body );
 
-            response.json(
-                {
-                    originalUrl : request.originalUrl ,
-                    method : request.method ,
-                    params : request.params ,
-                    body : request.body
-                }
-            );
+            response.json( friends );
 
             console.log( 'done.' );
             console.groupEnd();
@@ -43,17 +59,11 @@ const addRoutes = function( app ) {
             console.group( `# Route '/survey'` );
             console.log( 'request.originalUrl :' , request.originalUrl );
             console.log( 'request.method :' , request.method );
-            console.log( 'Parameters :' , request.params );
-            console.log( 'Body :' , request.body );
+            console.log( 'request.params :' , request.params );
+            console.log( 'request.body :' , request.body );
+            console.log( 'request.body.answers :' , request.body.answers );
 
-            response.json(
-                {
-                    originalUrl : request.originalUrl ,
-                    method : request.method ,
-                    params : request.params ,
-                    body : request.body
-                }
-            );
+            response.json( matchFriend( request.body.answers ) );
 
             console.log( 'done.' );
             console.groupEnd();

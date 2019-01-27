@@ -5,7 +5,7 @@
 var path = require( 'path' );
 
 
-/*** FUNCTION addStaticRoutes
+/*** FUNCTION addRoutes
 ***/
 
 const addRoutes = function( app ) {

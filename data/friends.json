@@ -27,26 +27,26 @@
     {
         "name" : "Lewis Hamilton" ,
         "photo" : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Lewis_Hamilton_2016_Malaysia_2.jpg/440px-Lewis_Hamilton_2016_Malaysia_2.jpg" ,
-        "answers" : [ 2 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 ]
+        "answers" : [ 5 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 ]
     } ,
     {
         "name" : "Valtteri Bottas" ,
         "photo" : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Bottas_Silverstone_2018_%28cropped%29.jpg/440px-Bottas_Silverstone_2018_%28cropped%29.jpg" ,
-        "answers" : [ 2 , 2 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 ]
+        "answers" : [ 5 , 2 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 ]
     } ,
     {
         "name" : "Sergio Pérez" ,
         "photo" : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Sergio_Perez_2016_Malaysia.jpg/440px-Sergio_Perez_2016_Malaysia.jpg" ,
-        "answers" : [ 2 , 3 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 ]
+        "answers" : [ 5 , 3 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 ]
     } ,
     {
         "name" : "Lance Stroll" ,
         "photo" : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Lance_Stroll_2017_Malaysia_3.jpg/500px-Lance_Stroll_2017_Malaysia_3.jpg" ,
-        "answers" : [ 2 , 4 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 ]
+        "answers" : [ 5 , 4 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 ]
     } ,
     {
         "name" : "Max Verstappen" ,
         "photo" : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Max_Verstappen_2017_Malaysia_3.jpg/440px-Max_Verstappen_2017_Malaysia_3.jpg" ,
-        "answers" : [ 2 , 5 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 ]
+        "answers" : [ 5 , 5 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 ]
     }
 ]
